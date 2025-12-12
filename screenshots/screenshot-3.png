@@ -1,0 +1,111 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f5f5f5"/>
+  
+  <!-- Browser chrome -->
+  <rect width="800" height="40" fill="#e0e0e0"/>
+  <circle cx="20" cy="20" r="6" fill="#ff5f56"/>
+  <circle cx="40" cy="20" r="6" fill="#ffbd2e"/>
+  <circle cx="60" cy="20" r="6" fill="#27c93f"/>
+  <text x="100" y="25" font-family="Arial, sans-serif" font-size="12" fill="#666">
+    https://yoursite.com/security-settings
+  </text>
+  
+  <!-- WordPress theme header -->
+  <rect width="800" height="60" y="40" fill="#23282d"/>
+  <text x="50" y="75" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#fff">
+    Your Site Name
+  </text>
+  <text x="650" y="70" font-family="Arial, sans-serif" font-size="13" fill="#fff">Home</text>
+  <text x="700" y="70" font-family="Arial, sans-serif" font-size="13" fill="#fff">About</text>
+  <text x="750" y="70" font-family="Arial, sans-serif" font-size="13" fill="#fff">Contact</text>
+  
+  <!-- Page title area -->
+  <rect width="800" height="80" y="100" fill="#0073aa"/>
+  <text x="400" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#fff">
+    Security Settings
+  </text>
+  
+  <!-- Main content area with sidebar -->
+  <rect x="50" y="200" width="200" height="380" fill="#ffffff" stroke="#ddd" stroke-width="1"/>
+  
+  <!-- Sidebar -->
+  <text x="70" y="230" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#23282d">
+    Account Menu
+  </text>
+  <rect x="60" y="240" width="180" height="30" fill="#f0f0f0" rx="3"/>
+  <text x="75" y="262" font-family="Arial, sans-serif" font-size="13" fill="#23282d">
+    Profile
+  </text>
+  <rect x="60" y="275" width="180" height="30" fill="#0073aa" rx="3"/>
+  <text x="75" y="297" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#fff">
+    Security Settings
+  </text>
+  <rect x="60" y="310" width="180" height="30" fill="#f0f0f0" rx="3"/>
+  <text x="75" y="332" font-family="Arial, sans-serif" font-size="13" fill="#23282d">
+    Preferences
+  </text>
+  
+  <!-- Main content -->
+  <rect x="270" y="200" width="480" height="380" fill="#ffffff" stroke="#ddd" stroke-width="1"/>
+  
+  <!-- Page intro text -->
+  <text x="290" y="230" font-family="Arial, sans-serif" font-size="14" fill="#666">
+    Manage your two-factor authentication settings below to
+  </text>
+  <text x="290" y="250" font-family="Arial, sans-serif" font-size="14" fill="#666">
+    enhance your account security.
+  </text>
+  
+  <!-- Shortcode content preview -->
+  <rect x="285" y="270" width="450" height="290" fill="#f9f9f9" stroke="#ddd" stroke-width="1" rx="6"/>
+  
+  <text x="300" y="300" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#23282d">
+    Two-Factor Authentication Settings
+  </text>
+  
+  <!-- Mini status section -->
+  <rect x="300" y="320" width="420" height="50" fill="#fff" rx="4"/>
+  <text x="315" y="340" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#23282d">Status</text>
+  <rect x="315" y="347" width="35" height="18" fill="#0073aa" rx="9"/>
+  <circle cx="342" cy="356" r="7" fill="#fff"/>
+  <text x="360" y="360" font-family="Arial, sans-serif" font-size="12" fill="#23282d">
+    Enable Two-Factor Authentication
+  </text>
+  
+  <!-- Mini method cards -->
+  <rect x="300" y="380" width="420" height="100" fill="#fff" rx="4"/>
+  <text x="315" y="400" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#23282d">
+    Authentication Method
+  </text>
+  
+  <rect x="315" y="410" width="120" height="55" fill="#f0f8ff" stroke="#0073aa" stroke-width="2" rx="4"/>
+  <text x="375" y="432" text-anchor="middle" font-family="Arial, sans-serif" font-size="20">📱</text>
+  <text x="375" y="452" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#23282d">
+    Authenticator App
+  </text>
+  
+  <rect x="445" y="410" width="120" height="55" fill="#fff" stroke="#ddd" stroke-width="1" rx="4"/>
+  <text x="505" y="432" text-anchor="middle" font-family="Arial, sans-serif" font-size="20">✉️</text>
+  <text x="505" y="452" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#23282d">
+    Email
+  </text>
+  
+  <rect x="575" y="410" width="120" height="55" fill="#fff" stroke="#ddd" stroke-width="1" rx="4"/>
+  <text x="635" y="432" text-anchor="middle" font-family="Arial, sans-serif" font-size="20">📞</text>
+  <text x="635" y="452" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#23282d">
+    SMS
+  </text>
+  
+  <!-- Save button -->
+  <rect x="300" y="495" width="100" height="30" fill="#0073aa" rx="4"/>
+  <text x="350" y="515" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#fff">
+    Save Settings
+  </text>
+  
+  <!-- Footer -->
+  <rect width="800" height="20" y="580" fill="#23282d"/>
+  <text x="400" y="594" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#999">
+    © 2025 Your Site Name. All rights reserved.
+  </text>
+</svg>

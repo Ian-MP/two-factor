@@ -1,0 +1,34 @@
+# WordPress
+wp-config.php
+wp-content/uploads/
+wp-content/cache/
+wp-content/backup-db/
+wp-content/advanced-cache.php
+wp-content/wp-cache-config.php
+
+# Development
+node_modules/
+.DS_Store
+.idea/
+.vscode/
+*.log
+*.swp
+*.swo
+*~
+.env
+.env.local
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Build artifacts
+dist/
+build/
+*.min.js
+*.min.css
+
+# OS files
+Thumbs.db
+desktop.ini

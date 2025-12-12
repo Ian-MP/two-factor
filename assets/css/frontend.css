@@ -1,0 +1,369 @@
+/**
+ * Two-Factor Frontend Styles
+ * Version: 1.0.0
+ */
+
+/* Container */
+.two-factor-frontend-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+.two-factor-header {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.two-factor-header h2 {
+    margin: 0 0 10px 0;
+    color: #23282d;
+    font-size: 28px;
+}
+
+.two-factor-header .description {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+}
+
+/* Messages */
+.two-factor-message {
+    margin-bottom: 20px;
+    padding: 12px 20px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.two-factor-message.success {
+    background: #d4edda;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+}
+
+.two-factor-message.error {
+    background: #f8d7da;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+}
+
+/* Sections */
+.two-factor-section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 6px;
+}
+
+.two-factor-section h3 {
+    margin: 0 0 15px 0;
+    color: #23282d;
+    font-size: 20px;
+}
+
+/* Toggle Switch */
+.two-factor-field {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.two-factor-toggle {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 26px;
+}
+
+.two-factor-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.two-factor-toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 26px;
+}
+
+.two-factor-toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+.two-factor-toggle input:checked + .two-factor-toggle-slider {
+    background-color: #0073aa;
+}
+
+.two-factor-toggle input:checked + .two-factor-toggle-slider:before {
+    transform: translateX(24px);
+}
+
+/* Method Options */
+.two-factor-methods {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.two-factor-method-option {
+    cursor: pointer;
+}
+
+.two-factor-method-option input[type="radio"] {
+    display: none;
+}
+
+.two-factor-method-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    background: #fff;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.two-factor-method-option input[type="radio"]:checked + .two-factor-method-card {
+    border-color: #0073aa;
+    background: #f0f8ff;
+}
+
+.two-factor-method-card:hover {
+    border-color: #0073aa;
+    box-shadow: 0 2px 8px rgba(0, 115, 170, 0.2);
+}
+
+.two-factor-method-icon {
+    font-size: 32px;
+    color: #0073aa;
+}
+
+.two-factor-method-icon .dashicons {
+    width: 32px;
+    height: 32px;
+    font-size: 32px;
+}
+
+.two-factor-method-info {
+    flex: 1;
+}
+
+.two-factor-method-info strong {
+    display: block;
+    margin-bottom: 5px;
+    color: #23282d;
+}
+
+.two-factor-method-info p {
+    margin: 0;
+    color: #666;
+    font-size: 13px;
+}
+
+/* App Setup */
+.two-factor-setup-steps ol {
+    margin: 0 0 20px 0;
+    padding-left: 25px;
+}
+
+.two-factor-setup-steps li {
+    margin-bottom: 8px;
+    color: #666;
+}
+
+.two-factor-qr-code {
+    text-align: center;
+    margin: 20px 0;
+    padding: 20px;
+    background: #fff;
+    border-radius: 6px;
+}
+
+.qr-code-image {
+    max-width: 200px;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.two-factor-secret-key {
+    margin: 15px 0 0 0;
+    font-size: 14px;
+}
+
+.two-factor-secret-key code {
+    padding: 5px 10px;
+    background: #f0f0f0;
+    border-radius: 3px;
+    font-family: monospace;
+    font-size: 13px;
+}
+
+.two-factor-verification {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.two-factor-verification label {
+    font-weight: 600;
+}
+
+.two-factor-verification input[type="text"] {
+    width: 120px;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+/* Backup Codes */
+.two-factor-backup-codes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.backup-code {
+    display: block;
+    padding: 10px 15px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 14px;
+    text-align: center;
+    color: #23282d;
+}
+
+/* Status Display */
+.two-factor-status-info p {
+    margin: 0 0 10px 0;
+    font-size: 15px;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.status-enabled {
+    background: #d4edda;
+    color: #155724;
+}
+
+.status-disabled {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.method-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    background: #e3f2fd;
+    border-radius: 12px;
+    color: #0d47a1;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* Actions */
+.two-factor-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-top: 20px;
+    border-top: 2px solid #f0f0f0;
+}
+
+.two-factor-actions .spinner {
+    float: none;
+    margin: 0;
+}
+
+.two-factor-actions .spinner.is-active {
+    display: inline-block;
+    visibility: visible;
+}
+
+/* Buttons */
+.two-factor-frontend-container .button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.two-factor-frontend-container .button-primary {
+    background: #0073aa;
+    color: #fff;
+}
+
+.two-factor-frontend-container .button-primary:hover {
+    background: #005a87;
+}
+
+/* Error State */
+.two-factor-error {
+    padding: 15px 20px;
+    background: #f8d7da;
+    border: 1px solid #f5c6cb;
+    border-radius: 4px;
+    color: #721c24;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .two-factor-frontend-container {
+        padding: 15px;
+    }
+    
+    .two-factor-methods {
+        grid-template-columns: 1fr;
+    }
+    
+    .two-factor-method-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .two-factor-backup-codes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .two-factor-verification {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

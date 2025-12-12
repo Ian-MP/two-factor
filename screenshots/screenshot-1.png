@@ -1,0 +1,92 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f5f5f5"/>
+  
+  <!-- Browser chrome -->
+  <rect width="800" height="40" fill="#e0e0e0"/>
+  <circle cx="20" cy="20" r="6" fill="#ff5f56"/>
+  <circle cx="40" cy="20" r="6" fill="#ffbd2e"/>
+  <circle cx="60" cy="20" r="6" fill="#27c93f"/>
+  
+  <!-- Content area -->
+  <rect x="50" y="70" width="700" height="500" fill="#ffffff" stroke="#ddd" stroke-width="1" rx="8"/>
+  
+  <!-- Header -->
+  <text x="400" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#23282d">
+    Two-Factor Authentication Settings
+  </text>
+  <text x="400" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#666">
+    Enhance your account security by enabling two-factor authentication.
+  </text>
+  
+  <!-- Status section -->
+  <rect x="70" y="160" width="660" height="80" fill="#f9f9f9" rx="6"/>
+  <text x="85" y="185" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#23282d">Status</text>
+  
+  <!-- Toggle switch -->
+  <rect x="85" y="200" width="50" height="26" fill="#0073aa" rx="13"/>
+  <circle cx="122" cy="213" r="10" fill="#fff"/>
+  <text x="145" y="218" font-family="Arial, sans-serif" font-size="14" fill="#23282d">
+    Enable Two-Factor Authentication
+  </text>
+  
+  <!-- Authentication Method section -->
+  <rect x="70" y="260" width="660" height="180" fill="#f9f9f9" rx="6"/>
+  <text x="85" y="285" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#23282d">
+    Authentication Method
+  </text>
+  
+  <!-- Method cards -->
+  <rect x="85" y="300" width="200" height="120" fill="#f0f8ff" stroke="#0073aa" stroke-width="2" rx="6"/>
+  <text x="185" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" fill="#0073aa">📱</text>
+  <text x="185" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#23282d">
+    Authenticator App
+  </text>
+  <text x="185" y="390" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#666">
+    Google Authenticator or Authy
+  </text>
+  
+  <rect x="295" y="300" width="200" height="120" fill="#fff" stroke="#ddd" stroke-width="2" rx="6"/>
+  <text x="395" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" fill="#0073aa">✉️</text>
+  <text x="395" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#23282d">
+    Email
+  </text>
+  <text x="395" y="390" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#666">
+    Receive codes via email
+  </text>
+  
+  <rect x="505" y="300" width="200" height="120" fill="#fff" stroke="#ddd" stroke-width="2" rx="6"/>
+  <text x="605" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" fill="#0073aa">📞</text>
+  <text x="605" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#23282d">
+    SMS
+  </text>
+  <text x="605" y="390" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#666">
+    Receive codes via text
+  </text>
+  
+  <!-- Current Status -->
+  <rect x="70" y="460" width="660" height="80" fill="#f9f9f9" rx="6"/>
+  <text x="85" y="485" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#23282d">
+    Current Status
+  </text>
+  <text x="85" y="510" font-family="Arial, sans-serif" font-size="14" fill="#23282d">
+    Status:
+  </text>
+  <rect x="135" y="498" width="60" height="20" fill="#d4edda" rx="10"/>
+  <text x="165" y="512" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#155724">
+    Enabled
+  </text>
+  <text x="220" y="510" font-family="Arial, sans-serif" font-size="14" fill="#23282d">
+    Method:
+  </text>
+  <rect x="280" y="498" width="120" height="20" fill="#e3f2fd" rx="10"/>
+  <text x="340" y="512" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#0d47a1">
+    Authenticator App
+  </text>
+  
+  <!-- Save button -->
+  <rect x="70" y="555" width="120" height="36" fill="#0073aa" rx="4"/>
+  <text x="130" y="578" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fff">
+    Save Settings
+  </text>
+</svg>
