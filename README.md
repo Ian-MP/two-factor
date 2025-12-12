@@ -1,6 +1,6 @@
 <H1>2FA Front-end Display</H1>
-# two-factor
-# Front-end display via shortcode [two_factor_user_settings]
+# 'two-factor' plugin additions.<br>
+# Front-end display via shortcode [two_factor_user_settings]<br>
 
 <H2>Files</H2>
 see 'class-two-factor-shortcode.php' for shortcode.<br>
