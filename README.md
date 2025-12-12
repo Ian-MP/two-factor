@@ -3,11 +3,11 @@
 # Front-end display via shortcode [two_factor_user_settings]
 
 <H2>Files</H2>
-# see 'class-two-factor-shortcode.php' for shortcode
-# see 'two-factor-frontend.css' for form layout
-# (Layout is for my theme Kadence - you might want to modify)
-# see 'add-to_functions.php' for addition to child-theme's functions.php
-# (This allows you to exclude 'providers' you don't want to make available)
+see 'class-two-factor-shortcode.php' for shortcode
+see 'two-factor-frontend.css' for form layout
+(Layout is for my theme Kadence - you might want to modify)
+see 'add-to_functions.php' for addition to child-theme's functions.php
+(This allows you to exclude 'providers' you don't want to make available)
 
 <H2> Screenshots </H2>
 # see '2FA Front-end 01.jpg' for initial front-end screen
