@@ -1,0 +1,191 @@
+/* Two-Factor Frontend Shortcode Styles */
+
+.two-factor-shortcode-wrapper {
+	max-width: 800px;
+	margin: 20px 0;
+	padding: 20px;
+	background: #fff;
+	border:  1px solid #ddd;
+	border-radius: 4px;
+}
+
+.two-factor-shortcode-title {
+	margin-top: 0;
+	padding-bottom: 10px;
+	border-bottom: 2px solid #0073aa;
+}
+
+.two-factor-notice {
+	padding: 12px;
+	margin:  15px 0;
+	border-left: 4px solid #0073aa;
+	background: #f0f6fc;
+}
+
+.two-factor-notice .two-factor-success {
+	border-left-color: #46b450;
+	background: #ecf7ed;
+}
+
+.two-factor-notice.two-factor-error {
+	border-left-color: #dc3232;
+	background: #fef7f7;
+}
+
+.two-factor-notice.two-factor-warning {
+	border-left-color: #ffb900;
+	background: #fff8e5;
+}
+
+.two-factor-notice.two-factor-info {
+	border-left-color: #00a0d2;
+	background:  #e5f5fa;
+}
+
+.two-factor-notice p {
+	margin: 0.5em 0;
+}
+
+/* 'Revalidate Now' button */
+.button {
+	margin: 12px 0 0 0px;
+	font-size:14px !important;
+	box-shadow: 1px 1px 2px 0 #3f3f3f !important;
+}
+.button:hover {
+	box-shadow: 0 0 0 0 !important;
+}
+
+.two-factor-description {
+	margin-bottom: 20px;
+	padding: 15px;
+	background: #f9f9f9;
+	border-radius: 3px;
+}
+
+.two-factor-methods-table {
+	width: 100%;
+	margin:  15px 0;
+	border-collapse: collapse;
+}
+
+.two-factor-methods-table tr {
+	border-bottom: 1px solid #e0e0e0;
+}
+
+.two-factor-methods-table tr:last-child {
+	border-bottom: none;
+}
+
+.two-factor-method-cell {
+	padding: 12px 10px;
+}
+
+.two-factor-method-label {
+	display: flex;
+	align-items: center;
+	font-size: 16px;
+	margin-bottom:  10px;
+}
+
+.two-factor-method-label input[type="checkbox"] {
+	margin-right: 12px;
+	width: 18px;
+	height: 18px;
+	cursor: pointer;
+}
+
+.two-factor-method-label strong {
+	font-weight: 600;
+}
+
+.two-factor-primary-method {
+	margin:  25px 0;
+	padding: 20px;
+	background: #f9f9f9;
+	border-radius:  3px;
+}
+
+.two-factor-primary-method h3 {
+	margin-top: 0;
+	margin-bottom: 10px;
+}
+
+.two-factor-primary-method select {
+	width: 100%;
+	max-width: 400px;
+	padding: 8px;
+	font-size: 14px;
+	border: 1px solid #ddd;
+	border-radius: 3px;
+}
+
+.two-factor-primary-method .description {
+	margin:  10px 0;
+	color: #666;
+	font-size: 13px;
+}
+
+.two-factor-submit {
+	margin-top: 10px;
+	padding-top: 20px;
+	border-top:  1px solid #e0e0e0;
+}
+
+.two-factor-submit .button-primary {
+	padding: 8px 12px;
+	font-size:  16px !important;
+	border: none;
+	box-shadow: 1px 1px 2px 0 #3f3f3f;
+}
+
+.button.button-secondary, .button.totp-submit {
+	font-size: 14px;
+	margin: 4px;
+	box-shadow: 1px 1px 2px 0 #3f3f3f;
+}
+
+/* Provider-specific styles */
+#two-factor-totp-options,
+#two-factor-backup-codes {
+	margin:  10px 0 10px 0;
+	padding: 12px;
+	background:  #f7f7f7;
+}
+
+/* QR Code container */
+.two-factor-qr-code {
+	margin: 15px 0;
+	text-align: center;
+}
+
+.two-factor-qr-code img {
+	max-width: 200px;
+	height: auto;
+}
+
+/* Backup codes */
+.two-factor-backup-codes-wrapper {
+	margin: 10px 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+	.two-factor-shortcode-wrapper {
+		padding: 12px;
+	}
+
+	.two-factor-method-label {
+		font-size: 14px;
+	}
+
+	.two-factor-primary-method select {
+		max-width: 100%;
+	}
+}
+
+/* Disabled state */
+.two-factor-frontend-form[disabled] {
+	opacity: 0.6;
+	pointer-events: none;
+}
