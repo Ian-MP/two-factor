@@ -334,6 +334,15 @@
     background: #005a87;
 }
 
+.two-factor-frontend-container .button-warning {
+    background: #ff9800;
+    color: #fff;
+}
+
+.two-factor-frontend-container .button-warning:hover {
+    background: #f57c00;
+}
+
 /* Error State */
 .two-factor-error {
     padding: 15px 20px;

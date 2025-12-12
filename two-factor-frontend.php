@@ -32,6 +32,7 @@ class Two_Factor_Frontend {
         add_action('init', array($this, 'register_shortcode'));
         add_action('wp_enqueue_scripts', array($this, 'enqueue_scripts'));
         add_action('wp_ajax_update_two_factor_settings', array($this, 'handle_ajax_update'));
+        add_action('wp_ajax_regenerate_backup_codes', array($this, 'handle_regenerate_codes'));
     }
     
     /**
@@ -87,6 +88,13 @@ class Two_Factor_Frontend {
         $user_id = get_current_user_id();
         $current_settings = $this->get_user_settings($user_id);
         
+        // Generate backup codes if they don't exist
+        if (empty($current_settings['backup_codes'])) {
+            $backup_codes = $this->generate_backup_codes();
+        } else {
+            $backup_codes = $current_settings['backup_codes'];
+        }
+        
         ob_start();
         include TWO_FACTOR_FRONTEND_PATH . 'templates/settings-form.php';
         return ob_get_clean();
@@ -134,12 +142,44 @@ class Two_Factor_Frontend {
     }
     
     /**
+     * Handle backup codes regeneration request
+     */
+    public function handle_regenerate_codes() {
+        check_ajax_referer('two_factor_settings_nonce', 'nonce');
+        
+        if (!is_user_logged_in()) {
+            wp_send_json_error(array('message' => __('Unauthorized', 'two-factor-frontend')));
+        }
+        
+        $user_id = get_current_user_id();
+        
+        // Generate new backup codes
+        $new_codes = $this->generate_backup_codes();
+        
+        // Save to user meta
+        update_user_meta($user_id, 'two_factor_backup_codes', $new_codes);
+        
+        wp_send_json_success(array(
+            'codes' => $new_codes,
+            'message' => __('New backup codes generated successfully.', 'two-factor-frontend')
+        ));
+    }
+    
+    /**
      * Generate backup codes
      */
     public function generate_backup_codes() {
         $codes = array();
         for ($i = 0; $i < 10; $i++) {
-            $codes[] = sprintf('%04d-%04d', rand(1000, 9999), rand(1000, 9999));
+            // Use cryptographically secure random number generator
+            if (function_exists('random_int')) {
+                $part1 = random_int(1000, 9999);
+                $part2 = random_int(1000, 9999);
+            } else {
+                $part1 = wp_rand(1000, 9999);
+                $part2 = wp_rand(1000, 9999);
+            }
+            $codes[] = sprintf('%04d-%04d', $part1, $part2);
         }
         return $codes;
     }

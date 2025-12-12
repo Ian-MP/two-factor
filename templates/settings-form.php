@@ -142,11 +142,7 @@ $app_configured = !empty($current_settings['app_configured']);
             </p>
             <div class="two-factor-backup-codes">
                 <?php
-                $backup_codes = !empty($current_settings['backup_codes']) ? $current_settings['backup_codes'] : array();
-                if (empty($backup_codes)) {
-                    $plugin = new Two_Factor_Frontend();
-                    $backup_codes = $plugin->generate_backup_codes();
-                }
+                // Use backup codes passed from the shortcode callback
                 foreach ($backup_codes as $code) {
                     echo '<code class="backup-code">' . esc_html($code) . '</code>';
                 }

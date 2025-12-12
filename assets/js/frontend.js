@@ -79,7 +79,7 @@
             const code = $('#verification_code').val();
             
             if (!code || code.length !== 6) {
-                alert('Please enter a valid 6-digit code.');
+                showMessage('Please enter a valid 6-digit code.', 'error');
                 return;
             }
             
@@ -90,27 +90,59 @@
         
         // Handle regenerate backup codes
         $('#regenerate-codes-btn').on('click', function() {
-            if (!confirm('Are you sure you want to generate new backup codes? Your old codes will no longer work.')) {
+            const $button = $(this);
+            const $codesContainer = $('.two-factor-backup-codes');
+            
+            // Show inline confirmation
+            if (!$button.data('confirmed')) {
+                $button.data('confirmed', true)
+                    .text('Click again to confirm')
+                    .addClass('button-warning');
+                
+                // Reset after 3 seconds if not clicked
+                setTimeout(function() {
+                    if ($button.data('confirmed')) {
+                        $button.data('confirmed', false)
+                            .text('Generate New Codes')
+                            .removeClass('button-warning');
+                    }
+                }, 3000);
+                
                 return;
             }
             
-            const $button = $(this);
+            // Reset confirmation state
+            $button.data('confirmed', false).removeClass('button-warning');
+            
             $button.prop('disabled', true).text('Generating...');
             
-            // In a real implementation, this would make an AJAX call
-            setTimeout(function() {
-                // Generate new codes
-                const $codesContainer = $('.two-factor-backup-codes');
-                $codesContainer.empty();
-                
-                for (let i = 0; i < 10; i++) {
-                    const code = generateRandomCode();
-                    $codesContainer.append('<code class="backup-code">' + code + '</code>');
+            // Make AJAX call to generate new codes server-side
+            $.ajax({
+                url: twoFactorFrontend.ajaxurl,
+                type: 'POST',
+                data: {
+                    action: 'regenerate_backup_codes',
+                    nonce: twoFactorFrontend.nonce
+                },
+                success: function(response) {
+                    if (response.success && response.data.codes) {
+                        // Replace codes with new ones from server
+                        $codesContainer.empty();
+                        response.data.codes.forEach(function(code) {
+                            $codesContainer.append('<code class="backup-code">' + code + '</code>');
+                        });
+                        showMessage('New backup codes generated successfully! Save them in a safe place.', 'success');
+                    } else {
+                        showMessage(response.data.message || 'Failed to generate new codes.', 'error');
+                    }
+                },
+                error: function() {
+                    showMessage('Failed to generate new codes. Please try again.', 'error');
+                },
+                complete: function() {
+                    $button.prop('disabled', false).text('Generate New Codes');
                 }
-                
-                showMessage('New backup codes generated successfully!', 'success');
-                $button.prop('disabled', false).text('Generate New Codes');
-            }, 1000);
+            });
         });
         
         /**
@@ -164,15 +196,6 @@
             };
             
             $('.method-badge').text(methodLabels[method] || method);
-        }
-        
-        /**
-         * Generate random backup code
-         */
-        function generateRandomCode() {
-            const part1 = Math.floor(1000 + Math.random() * 9000);
-            const part2 = Math.floor(1000 + Math.random() * 9000);
-            return part1 + '-' + part2;
         }
         
         // Format verification code input
